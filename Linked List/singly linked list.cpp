@@ -122,6 +122,7 @@ void insert_at_pos()
     while (i < pos - 1)
     {
         temp = temp->next;
+        i++;
     }
     newnode->next = temp->next;
     temp->next = newnode;
