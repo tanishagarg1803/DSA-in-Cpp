@@ -41,7 +41,7 @@ void print()
     temp = head;
     if (head == NULL)
     {
-        cout << "No elements to be printed" << endl;
+        cout << "\nNo elements to be printed" << endl;
     }
     else
     {
@@ -52,7 +52,7 @@ void print()
             temp = temp->next;
         }
     }
-    cout << "\n\n";
+    cout << "\n";
 }
 
 void insert_at_beg()
@@ -155,6 +155,9 @@ void delete_from_end()
         temp2 = temp;
         temp = temp->next;
     }
+    if(temp==head){
+        head=NULL;
+    }
     temp2->next = NULL;
     free(temp);
     return;
@@ -199,7 +202,7 @@ int main()
     int c = 0;
     while (c != 8)
     {
-        cout << "\n For singly linked list , press :\n 1. print \n 2. insert node at beginning\n 3. insert node at end\n 4. insert node at given position\n 5.delete node from beginning \n 6. delete node from end\n 7. delete node from given position \n 8. exit \n \n your choice:  ";
+        cout << "\n For singly linked list , press :\n 1. print \n 2. insert node at beginning\n 3. insert node at end\n 4. insert node at given position\n 5. delete node from beginning \n 6. delete node from end\n 7. delete node from given position \n 8. exit \n \n your choice:  ";
         cin >> c;
         switch (c)
         {
@@ -232,3 +235,4 @@ int main()
     }
     return 0;
 }
+
