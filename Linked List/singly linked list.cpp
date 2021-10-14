@@ -157,6 +157,7 @@ void delete_from_end()
     }
     if(temp==head){
         head=NULL;
+        return;
     }
     temp2->next = NULL;
     free(temp);
